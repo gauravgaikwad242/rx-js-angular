@@ -1,0 +1,32 @@
+<h4>**all operators are same as **map but less powerfull</h4>
+<div>
+  <h2>switch map demo for searching with debounceTime & distinctUntilChanged</h2>
+  <form [formGroup]="searchGroup">
+    <input class="inputField mar" type="text" formControlName="searchString">
+  </form>
+  <select class="inputField mar">
+    <label for="">characters</label>
+    <option  *ngFor="let item of dropdownArray" >{{item['name']}}</option>
+  </select>
+</div>
+
+<div>
+  <button (click)="concatAllDemo()">concatall</button>
+</div>
+
+<style>
+  .inputField{
+    width: 300px;
+    height: 20px;
+    border: 1.5px solid blue;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    font-size: 1em;
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.mar {
+  margin: 4px;
+}
+</style>

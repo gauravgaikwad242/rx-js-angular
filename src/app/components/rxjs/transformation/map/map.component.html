@@ -1,0 +1,63 @@
+<div class="main">
+  <h2>MAP</h2>
+  <div class="mergeMap border">
+    <h3>MERGEMAP</h3><em>parallel</em>
+    <p>mergemap get observable of observable and subscribes it and returns data <br>
+    in simple words map will return observable object which we will have to subscribes
+  again<br>
+  but mergemap will subscribe the inner observables</p>
+  <br>
+  <h4>mergemap will subscribes all at once so if observabel has 5 observables inside it <br>
+  it will subscribe to all of them at once <br>
+this can be observed in the sequence of starwars api logs</h4>
+    <button (click)="mergeMapDemo()">mergeMap</button>
+    <button (click)="mergeMapDemoWithOf()">mergemap simple</button>
+    <br>
+    <button (click)="mergeMapWithSwapi()">mergemap startwars api</button>
+    <button (click)="zipDemo()">zip</button>
+  </div>
+
+  <div class="border concatMap">
+    <h3>CONCAT MAP</h3><em>sequential</em>
+    <h4>everything same as mergemap but <br>
+    instead of parallel execution it will do it sequentially
+  </h4>
+  <button (click)="concatMapWithSwapi()">concat starwars api</button>
+  </div>
+  <div class="border switchMap">
+    <h3>SWITCHMAP</h3><em>instantly switch to next</em>
+    <h4>everything same as mergemap but <br>
+    instead of parallel execution <br>
+    it instantly switches to next data
+  </h4>
+  <button (click)="switchMapWithSwapi()">switch starwars api</button>
+  </div>
+  <div class="border exhaustMap">
+    <h3>EXHAUSTMAP</h3><em>first complete going on then next</em>
+    <h4>everything same as mergemap but <br>
+    instead of parallel execution  <br>
+exhaust map doesnt switch to next input data it will first complete all the first observable execution <br>
+and will ignore all the incoming data till then <br>
+and when it is completed it will moveon to the next and ignore inbetween
+  </h4>
+  <button (click)="exhaustMapWithSwapi()">exhaust starwars api</button>
+  </div>
+<div class="border">
+  <h5>zip</h5>
+  <button (click)="zipDemo()">zip</button>
+</div>
+</div>
+<style>
+  .border{
+    border: 1px solid black;
+    margin: 2px;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+  h2{
+    align-self: center;
+  }
+</style>
+
